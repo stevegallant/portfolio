@@ -6,6 +6,7 @@ body {
   padding: 0;
   text-align: center;
   box-sizing: border-box;
+  background-color: #ffdd99;
 }
 
 a {
@@ -82,6 +83,13 @@ header {
   text-align: center;
 }
 
+.project-detail {
+  width: 100%;
+  text-align: center;
+  font-size: .75em;
+  font-style: italic;
+}
+
 #all-button {
   display: block;
   width: 200px;
@@ -97,7 +105,7 @@ header {
 #contact {
   color: white;
   background-color: #bc5a45;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .contact-detail {
