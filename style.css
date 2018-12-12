@@ -9,13 +9,11 @@ body {
   padding: 0;
   text-align: center;
   box-sizing: border-box;
-  /* background-color: #ffdd99; */
 }
 
 a {
   color: #404040;
   text-decoration: none;
-  text-shadow: 1px 1px 2px #ffff00;
 }
 
 a:hover {
@@ -25,6 +23,7 @@ a:hover {
 h1 {
   color: #fd4d0c;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -32,18 +31,43 @@ header {
   width: 100%;
   height: 60px;
   background-color: #ffdd99;
+  text-align: right;
+}
+
+.hamburger {
+  display: inline-block;
+  margin: 10px;
+  color: #bc5a45;
+  background-color: #ffdd99;
+  border: none;
+  font-size: 1.75em;
 }
 
 #navbar {
-  width: 100%;
+  width: 200px;
   list-style: none;
-  text-align: center;
+  /* text-align: center; */
+  position: absolute;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  transition: left 0.3s ease,
+              box-shadow 0.3s ease;
+  z-index: 999;
 }
 
 .nav-link {
-  display: inline-block;
+  display: none; /* hide for hamburger menu */
+  /* display: inline-block; */
   margin: 20px;
-/*   padding: 10px; */
+}
+
+.nav-link a {                         /* PICK UP HERE!!!  */
+  padding: 8px;
+  border: 2px solid #bc5a45;
+  border-radius: 95% / 85%;
 }
 
 #buffer {
@@ -51,13 +75,14 @@ header {
 }
 
 #welcome {
-  background-image: url("https://photos.smugmug.com/Web-Dev/Portfolio-Site/i-cM38h6c/0/1e18cae2/X2/apple-black-and-white-black-and-white-169573-X2.jpg");
+  background: linear-gradient(rgba(255,221,153,.2), rgba(255,221,153,.2)),
+              no-repeat left center fixed url("https://photos.smugmug.com/Web-Dev/Portfolio-Site/i-cM38h6c/0/1e18cae2/X2/apple-black-and-white-black-and-white-169573-X2.jpg");
+  background-size: cover;
   width: 100%;
   min-height: 100vh;
   margin: 0;
   padding-top: 100px;
   box-sizing: border-box;
-  /* position: relative; */
   text-align: center;
 }
 
@@ -168,18 +193,27 @@ header {
 
 @media (min-width: 500px) {
   #navbar {
+    width: 100%;
     text-align: right;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-link {
+    display: inline-block;
+    margin: 25px 20px 15px;
+    border: 1px solid blue;
+  }
+
+  #intro {
+    width: 500px;
   }
 
   .project-tile {
     margin: 40px 100px;
   }
 
-  .nav-link {
-    margin: 25px 55px 15px;
-  }
 
-  #intro {
-    width: 500px;
-  }
 }
