@@ -41,6 +41,9 @@
 <section id="about">
   <div id="buffer"></div>
   <h1>about me</h1>
+  <div id="social">
+    <p>SOCIAL ICONS HERE</p>
+  </div>
   <div id="intro">
     <p>Greetings - welcome to my portfolio site.</p>
     <p>I'm Steve Gallant, a front-end developer pursuing a newly-discovered
@@ -62,6 +65,8 @@
       your team.</p>
 
   </div>
+
+
 </section> <!--end about-->
 
 <section id="projects">
@@ -88,6 +93,32 @@
 <section id="contact">
   <div id="buffer"></div>
   <h2 class="contact-header">get in touch...</h2>
+
+  <form id="contact-form" method="post" action="mail.php">
+    <div class="label">
+      <label id="name-label" for="contact-name">* your name:</label>
+    </div>
+    <div class="input">
+      <input id="contact-name" class="input-field" type="text" placeholder="Enter your name" required>
+    </div>
+    <div class="label">
+      <label id="email-label" for="contact-email">* your email:</label>
+    </div>
+    <div class="input">
+      <input id="contact-email" class="input-field" type="email" placeholder="Enter your email address" required>
+    </div>
+    <div class="label">
+      <label id="message-label" for="contact-message">* message:</label>
+    </div>
+    <div class="input">
+      <textarea id="contact-message" class="input-field" type="text" placeholder="What's on your mind?" required></textarea>
+    </div>
+    <p>* All fields required</p>
+    <input id="contact-submit" type="submit" value="send">
+
+  </form>
+
+
   <a href="https://www.linkedin.com/in/stephen-gallant-63239515/" target="_blank" class="contact-detail">LinkedIn</a>
   <a href="#" class="contact-detail">email</a>
   <a id="profile-link" href="https://github.com/stevegallant" target="_blank" class="contact-detail">GitHub</a>
@@ -97,6 +128,8 @@
 </section> <!-- end contact -->
 
 
-<footer></footer>
+<footer>
+  <p>All rights reserved &copy;Stephen Gallant 2019</p>
+</footer>
 </body>
 </html>
