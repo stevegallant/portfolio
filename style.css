@@ -1,3 +1,8 @@
+/*
+Mobile-first apprach. Styles for widers screens are towards the bottom
+under Media Queries section
+*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,9 +21,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   text-shadow: 1px 1px 1px #fd4d0c;
-}
+} */
 
 h1 {
   color: #fd4d0c;
@@ -27,16 +32,16 @@ h1 {
 header {
   position: fixed;
   top: 0;
-  overflow: hidden;
   width: 100%;
   height: 60px;
   background-color: #ffdd99;
   text-align: right;
 }
 
-.hamburger {
-  display: inline-block;
-  margin: 10px;
+.hamburger,
+.nav-close {
+  /* display: inline-block; */
+  padding: 10px;
   color: #bc5a45;
   background-color: #ffdd99;
   border: none;
@@ -44,30 +49,62 @@ header {
 }
 
 #navbar {
-  width: 200px;
-  list-style: none;
-  /* text-align: center; */
   position: absolute;
-  left: -200px;
+  /* left: 200px; */
   top: 0;
+  right: -150px;        /* -150px hides menu to the side of window? */
   height: 100%;
-  overflow-y: scroll;
-  overflow-x: visible;
+  overflow: visible;
   transition: left 0.3s ease,
               box-shadow 0.3s ease;
   z-index: 999;
 }
 
-.nav-link {
-  display: none; /* hide for hamburger menu */
-  /* display: inline-block; */
-  margin: 20px;
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 1em 0 0;
+  min-height: 100%;
+  width: 150px;
+  /* background: #ffdd99; */
+  background: transparent;
+  /* Hide shadow w/ -8px while 'closed' */
+  /* -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+     -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+          box-shadow: -8px 0 8px rgba(0,0,0,.5); */
 }
 
-.nav-link a {                         /* PICK UP HERE!!!  */
+#navbar:target {
+  right: 0;
+}
+
+.nav-link {
+  display: block;
+  margin: 10px 5px;
+  line-height: 1em;
+  font-size: 1em;
+  text-align: center;
+}
+
+.nav-link li {
+  /* margin: 0 20px; */
+  /* width: 80px; */
+  width: 100%;
   padding: 8px;
   border: 2px solid #bc5a45;
-  border-radius: 95% / 85%;
+  border-radius: 95% / 95%;
+  background-color: #ffdd99;
+
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.nav-link li:hover {
+  color: #fd4d0c;
+  box-shadow: 5px 5px 8px #888888;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #888888;
 }
 
 #buffer {
@@ -86,19 +123,6 @@ header {
   text-align: center;
 }
 
-#welcome h1 {
-  margin-bottom: 15px;
-  padding-bottom: 0px;
-  font-size: 2.5em;
-  font-style: italic;
-  text-shadow: 2px 2px 4px #888888;
-}
-
-#welcome p {
-  margin-top: 0px;
-  font-size: 1.25em;
-}
-
 #name-badge {
   width: 300px;
   height: 150px;
@@ -107,6 +131,19 @@ header {
   border: 8px solid #bc5a45;
   border-radius: 150px / 80px;
   box-shadow: 5px 5px 8px #888888;
+}
+
+#name-badge h1 {
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  font-size: 2.5em;
+  font-style: italic;
+  text-shadow: 2px 2px 4px #888888;
+}
+
+#name-badge p {
+  margin-top: 0px;
+  font-size: 1.25em;
 }
 
 #about {
@@ -192,19 +229,53 @@ header {
 /* MEDIA QUERIES */
 
 @media (min-width: 500px) {
-  #navbar {
-    width: 100%;
-    text-align: right;
+  header {
+    overflow: none;
   }
 
-  .hamburger {
+  #navbar {
+    position: static;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    z-index: auto;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+    width: auto;
+    background: none;
+  }
+
+  .hamburger,
+  .nav-close {
     display: none;
   }
 
   .nav-link {
+    display: inline;
+    margin: 0;
+    padding: 0px;
+    background: none;
+    border: none;
+    /* border: 2px solid #bc5a45; */
+  }
+
+  .nav-link li {
     display: inline-block;
-    margin: 25px 20px 15px;
-    border: 1px solid blue;
+    margin: 15px 5px;
+    padding: 8px;
+    width: 80px;
+    border: 2px solid transparent;
+    /* border: 2px solid #bc5a45; */
+    border-radius: 100% / 95%;
+  }
+
+  .nav-link li:hover {
+      border: 2px solid #bc5a45;
   }
 
   #intro {
