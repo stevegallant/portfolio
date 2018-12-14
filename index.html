@@ -1,44 +1,86 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>Steve Gallant - Front-End Dev</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Gallant">
+  <meta Name="description" content="Personal portfolio site to showcase coding projects and provide contact methods for potential employers">
+  <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 <header>
+  <a href="#navbar" class="nav-toggle">
+    <button class="fa fa-bars hamburger"></button>
+  </a>
   <nav id="navbar">
-    <li class="nav-link"><a href="#welcome-section">about</a></li>
-    <li class="nav-link"><a href="#projects">samples</a></li>
-    <li class="nav-link"><a href="#contact">contact</a></li>
+    <a href="#main-nav-toggle" class="nav-close">
+      <span class="fa fa-close"></span>
+    </a>
+    <ul>
+      <a href="#welcome" class="nav-link"><li>welcome</li></a>
+      <a href="#about" class="nav-link"><li>about</li></a>
+      <a href="#projects" class="nav-link"><li>projects</li></a>
+      <a href="#contact" class="nav-link"><li>contact</li></a>
+    </ul>
   </nav>
+  <a href="#main-nav-toggle" class="backdrop" hidden></a>
 </header>
 
 
-<section id="welcome-section">
+<section id="welcome">
   <div id="buffer"></div>
-  <h1>steve's portfolio page</h1>
-  <p>jr front-end web developer</p>
-  <div id="intro">
-    <p>as a career-changer I'm looking to break in on the ground floor - the goal is to land a coding gig with a great team of people where I can learn while leveraging my career experience, organization, and time-management skills</p>
-
-    <p>the projects below reflect some of the skills and knowledge i've gained over the past several months since starting to learn coding in earnest</p>
+  <div id="name-badge">
+    <h1>Steve Gallant</h1>
+    <p>front-end web developer</p>
   </div>
 </section> <!--end welcome-->
 
+<section id="about">
+  <div id="buffer"></div>
+  <h1>about me</h1>
+  <div id="intro">
+    <p>Greetings - welcome to my portfolio site.</p>
+    <p>I'm Steve Gallant, a front-end developer pursuing a newly-discovered
+      passion for coding and web development after a successful career in IT
+      sysadmin and consulting. I love building responsive, user-friendly,
+      semantic web pages using HTML5, CSS3, and JavaScript and look forward to
+      learning new frameworks and languages as my studies continue.</p>
+    <p>As a career-changer, I'm seeking to land a junior-level web development
+      gig with a great team of people I can learn from, while leveraging
+      my proven work ethic and comfort in the workplace to bring value to my
+      next employer. My self-guided approach to learning technology has always
+      been non-traditional, yet effective and successful.
+      </p>
+    <p>I've been sharpening my skills in a disciplined course of online self-study
+      over the past year.  My projects below reflect some of the skills and
+      knowledge I've gained so far. I'm eager to start contributing what I've
+      learned to a team, and learn the ropes from ground-level...please reach
+      out so we can discuss how I might be able to help solve problems alongside
+      your team.</p>
+
+  </div>
+</section> <!--end about-->
+
 <section id="projects">
   <div id="buffer"></div>
-  <h2>some material I've worked on...</h2>
+  <h2>projects</h2>
   <a href="https://codepen.io/sjgallant/pen/RePEGe" class="project-tile" target="_blank">
     <img class="proj-pic" src="https://photos.smugmug.com/Dev/Images/i-dK65Thv/0/a9e783e4/XL/SalvagedBoatAnchorsScreen-XL.png" alt="Photo of project">
     <div class="project-title">Product Landing Page</div>
+    <div class="project-detail">Responsive HTML & CSS</div>
   </a>
   <a href="https://codepen.io/sjgallant/pen/jeZpwW" class="project-tile" target="_blank">
     <img class="proj-pic" src="https://photos.smugmug.com/Dev/Images/i-b2DLq4f/0/a2fdd458/XL/TechDocSample-GitHandbook-XL.png" alt="Photo of project">
-    <div class="project-title">Technical Documentation Page</div>
+    <div class="project-title">Technical Documentation Layout</div>
+    <div class="project-detail">Responsive HTML & CSS</div>
   </a>
   <a href="https://codepen.io/sjgallant/pen/jeNrqb" class="project-tile" target="_blank">
     <img class="proj-pic" src="https://photos.smugmug.com/Dev/Images/i-4wtvsFR/0/4e59e724/XL/SurveyForm-XL.png" alt="Photo of project">
     <div class="project-title">Survey Form Sample</div>
+    <div class="project-detail">Mobile-first HTML & CSS</div>
   </a>
   <a id="all-button" href="#" target="_blank">Show All</a>
 </section> <!-- end projects -->
@@ -46,10 +88,12 @@
 <section id="contact">
   <div id="buffer"></div>
   <h2 class="contact-header">get in touch...</h2>
-  <a href="mailto:sjgallant@hotmail.com" class="contact-detail">email</a>
-  <a href="tel:339-368-0287" target="_blank" class="contact-detail">call</a>
   <a href="https://www.linkedin.com/in/stephen-gallant-63239515/" target="_blank" class="contact-detail">LinkedIn</a>
+  <a href="#" class="contact-detail">email</a>
   <a id="profile-link" href="https://github.com/stevegallant" target="_blank" class="contact-detail">GitHub</a>
+  <a href="https://twitter.com/gallant_dev" target="_blank" class="contact-detail">twitter</a>
+
+
 </section> <!-- end contact -->
 
 
