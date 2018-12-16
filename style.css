@@ -287,8 +287,8 @@ header {
 
 footer {
   height: 3em;
-  color: white;
-  background-color: black;
+  color: #404040;
+  background-color: #ffdd99;
   font-size: .75em;
 }
 
