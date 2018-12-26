@@ -202,7 +202,8 @@ header {
 
 .proj-pic {
   width: 100%;
-  height: auto;
+  height: 220px;
+  /* height: auto; */
 }
 
 .project-title {
