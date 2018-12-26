@@ -299,7 +299,7 @@ footer p {
 
 /*************** MEDIA QUERIES ****************/
 
-@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
   header {
     overflow: none;
   }
