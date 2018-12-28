@@ -373,4 +373,74 @@ footer p {
     margin: 20px 30px;
   }
 
-}  /* end Media Queries */
+}
+
+@media screen and (min-width: 1000px) {
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  header {
+    height: 75px;
+  }
+
+  #navbar {
+    height: auto;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+    width: auto;
+  }
+
+  .nav-link {
+    font-size: 1.5em;
+  }
+
+  .nav-link li {
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px;
+    width: 120px;
+    border: 2px solid transparent;
+    border-radius: 100% / 95%;
+  }
+
+  .nav-link li:hover {
+      border: 2px solid #bc5a45;
+  }
+
+  #name-badge {
+    width: 460px;
+    height: 230px;
+    border-radius: 230px / 120px;
+  }
+
+  #name-badge h1 {
+    margin-bottom: 25px;
+    padding-bottom: 0px;
+    font-size: 3.5em;
+    font-style: italic;
+    text-shadow: 2px 2px 4px #888888;
+  }
+
+  #name-badge p {
+    font-size: 2em;
+  }
+
+  #intro {
+    flex: 3;
+    margin-left: 300px;
+    font-size: 1.25em;
+  }
+
+  .label,
+  .input-field {
+    font-size: 1.25em;
+  }
+
+}
+  /* end Media Queries */
