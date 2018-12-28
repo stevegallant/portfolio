@@ -442,5 +442,13 @@ footer p {
     font-size: 1.25em;
   }
 
+  #contact-submit {
+    width: 160px;
+    margin-bottom: 25px;
+    padding: 8px;
+    border-radius: 95% / 95%;
+    font-size: 1.25em;
+  }
+
 }
   /* end Media Queries */
