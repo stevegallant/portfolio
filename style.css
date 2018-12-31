@@ -82,9 +82,9 @@ header {
   border: 2px solid #bc5a45;
   border-radius: 95% / 95%;
   background-color: #ffdd99;
-
   text-align: center;
   box-sizing: border-box;
+  transition:  box-shadow .3s linear;
 }
 
 .nav-link li:hover {
