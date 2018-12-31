@@ -266,12 +266,18 @@ header {
   padding: 8px;
   border: 2px solid #bc5a45;
   border-radius: 95% / 95%;
-  box-shadow: 5px 5px 8px #888888;
+  color: #404040;
+  background-color: #ffdd99;
+  transition: box-shadow .3s linear;
+}
+
+#contact-submit:hover {
   color: #fd4d0c;
   font-style: italic;
   font-weight: bold;
   text-shadow: 1px 1px 2px #888888;
-  background-color: #ffdd99;
+  box-shadow: 5px 5px 8px #888888;
+  cursor: pointer;
 }
 
 #social-small div {
@@ -282,7 +288,7 @@ header {
 .social-icon-sm {
   margin: 0 10px;
   padding: 0;
-  font-size: 1.25em;
+  font-size: 1.75em;
   color: white;
 }
 
@@ -341,6 +347,7 @@ footer p {
     width: 80px;
     border: 2px solid transparent;
     border-radius: 100% / 95%;
+    transition: border .2s linear;
   }
 
   .nav-link li:hover {
