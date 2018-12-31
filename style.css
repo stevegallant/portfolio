@@ -32,6 +32,7 @@ header {
   height: 50px;
   background-color: #ffdd99;
   text-align: right;
+  z-index: 999;
 }
 
 .hamburger,
@@ -162,6 +163,7 @@ header {
   margin: 0 15px;
   padding: 0;
   font-size: 2.5em;
+  transition: .4s ease-in-out;
 }
 
 .gh-icon:hover {
@@ -171,6 +173,7 @@ header {
 .li-icon:hover {
   color: #0077b5;
 }
+
 .twitter-icon:hover {
   color: #55ACEE;
 }
@@ -203,12 +206,12 @@ header {
 .proj-pic {
   width: 100%;
   height: 220px;
-  /* height: auto; */
 }
 
 .project-title {
   width: 100%;
   color: #bc5a45;
+  font-size: 1.25em;
   text-align: center;
 }
 
@@ -301,6 +304,7 @@ footer {
 
 footer p {
   margin: 0;
+  padding-top: .75em;
 }
 
 /*************** MEDIA QUERIES ****************/
