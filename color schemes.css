@@ -1,0 +1,16 @@
+/* original scheme */
+--color-font-primary: #404040;  /* general text */
+--color-font-emph: #fd4d0c;     /* h1, etc */
+--color-font-light: white;      /* on dark bg */
+--color-bg-primary: #ffdd99;    /* header, etc */
+--color-bg-secondary: #bc5a45;  /* dark borders, contact section bg */
+--color-bg-tertiary: #ffdd99;
+
+/* test scheme 01 blue-silver */
+--color-font-primary: #404040;  /* general text */
+--color-font-emph: #BA1200;     /* h1, etc */
+--color-font-light: white;      /* on dark bg */
+--color-bg-primary: #406E8E;    /* header, etc */
+--color-bg-secondary: #23395B;  /* dark borders, contact section bg */
+/* --color-bg-tertiary: #87919E;  /* shape bg */
+--color-bg-tertiary: #C4CAD0;
