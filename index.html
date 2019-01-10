@@ -17,25 +17,25 @@
 <body>
 <header>
   <a href="#navbar" class="nav-toggle">
-    <button class="fa fa-bars hamburger"></button>
+    <span class="fa fa-bars hamburger"></span>
   </a>
   <nav id="navbar">
     <a href="#main-nav-toggle" class="nav-close">
       <span class="fa fa-close"></span>
     </a>
-    <ul>
-      <a href="#welcome" class="nav-link"><li>welcome</li></a>
-      <a href="#about" class="nav-link"><li>about</li></a>
-      <a href="#projects" class="nav-link"><li>projects</li></a>
-      <a href="#contact" class="nav-link"><li>contact</li></a>
-    </ul>
+    <div id="navlist">
+      <a href="#welcome" class="nav-link"><span>welcome</span></a>
+      <a href="#about" class="nav-link"><span>about</span></a>
+      <a href="#projects" class="nav-link"><span>projects</span></a>
+      <a href="#contact" class="nav-link"><span>contact</span></a>
+    </div>
   </nav>
   <a href="#main-nav-toggle" class="backdrop" hidden></a>
 </header>
 
 
 <section id="welcome">
-  <div id="buffer"></div>
+  <div class="buffer"></div>
   <div id="name-badge">
     <h1>Steve Gallant</h1>
     <p>front-end web developer</p>
@@ -43,7 +43,7 @@
 </section> <!--end welcome-->
 
 <section id="about">
-  <div id="buffer"></div>
+  <div class="buffer"></div>
   <h2>about me</h2>
   <div id="about-flex">
     <div id="social">
@@ -71,7 +71,7 @@
 </section> <!--end about-->
 
 <section id="projects">
-  <div id="buffer"></div>
+  <div class="buffer"></div>
   <h2>projects</h2>
   <a href="https://stevegallant.github.io/salvagedanchors/" class="project-tile" target="_blank">
     <img class="proj-pic" src="https://photos.smugmug.com/Dev/Images/i-gbv4Qgb/0/1899022c/XL/SalvagedBoatAnchorsScreen-XL.jpg" alt="Photo of project">
@@ -92,7 +92,7 @@
 </section> <!-- end projects -->
 
 <section id="contact">
-  <div id="buffer"></div>
+  <div class="buffer"></div>
   <h2 class="contact-header">get in touch...</h2>
 
   <form id="contact-form" method="post" action="mail.php">
@@ -112,7 +112,7 @@
       <label id="message-label" for="contact-message">message:</label>
     </div>
     <div class="input">
-      <textarea id="contact-message" class="input-field" type="text" placeholder="What's on your mind?" required></textarea>
+      <textarea id="contact-message" class="input-field" placeholder="What's on your mind?" required></textarea>
     </div>
     <p>* All fields required</p>
     <input id="contact-submit" type="submit" value="send">

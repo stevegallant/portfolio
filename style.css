@@ -56,7 +56,7 @@ header {
   transition: right .5s;
 }
 
-#navbar ul {
+#navlist {
   list-style: none;
   margin: 0;
   padding: 1em 0 0;
@@ -77,7 +77,7 @@ header {
   text-align: center;
 }
 
-.nav-link li {
+.nav-link span {
   width: 100%;
   padding: 8px;
   border: 2px solid #bc5a45;
@@ -88,7 +88,7 @@ header {
   transition:  box-shadow .3s linear;
 }
 
-.nav-link li:hover {
+.nav-link span:hover {
   color: #fd4d0c;
   box-shadow: 5px 5px 8px #888888;
   font-style: italic;
@@ -96,7 +96,7 @@ header {
   text-shadow: 1px 1px 2px #888888;
 }
 
-#buffer {
+.buffer {
   height: 60px;
 }
 
@@ -323,7 +323,7 @@ footer p {
     z-index: auto;
   }
 
-  #navbar ul {
+  #navlist {
     margin: 0;
     padding: 0;
     min-height: auto;
@@ -344,7 +344,7 @@ footer p {
     border: none;
   }
 
-  .nav-link li {
+  .nav-link span {
     display: inline-block;
     margin: 10px 5px;
     padding: 8px;
@@ -354,7 +354,7 @@ footer p {
     transition: border .2s linear;
   }
 
-  .nav-link li:hover {
+  .nav-link span:hover {
       border: 2px solid #bc5a45;
   }
 
@@ -400,7 +400,7 @@ footer p {
     height: auto;
   }
 
-  #navbar ul {
+  #navlist {
     margin: 0;
     padding: 0;
     min-height: auto;
@@ -411,7 +411,7 @@ footer p {
     font-size: 1.5em;
   }
 
-  .nav-link li {
+  .nav-link span {
     display: inline-block;
     margin: 10px 10px;
     padding: 10px;
@@ -420,7 +420,7 @@ footer p {
     border-radius: 100% / 95%;
   }
 
-  .nav-link li:hover {
+  .nav-link span:hover {
       border: 2px solid #bc5a45;
   }
 
