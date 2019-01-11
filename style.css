@@ -3,13 +3,31 @@ Mobile-first apprach. Styles for widers screens are towards the bottom
 under Media Queries section
 */
 
+/****** Color variables  ******/
+:root {
+
+  /* test scheme 02 copper-blue */
+  --color-font-primary: #404040;  /* general text */
+  --color-font-emph: #70a288;     /* h1, etc */
+  --color-font-light: white;      /* on dark bg */
+  --color-bg-primary: #dab785;    /* header, etc */
+  --color-bg-secondary: #d5896f;  /* dark borders, contact section bg */
+  --color-bg-tertiary: #dab785;  /* shape bg */
+  /* --color-bg-projects: #c0d7bb; */
+  --color-bg-projects: #daf0ee;
+  /* --color-bg-contact: #04395e; */
+  --color-bg-contact: #d5896f;
+}
+
+
+/****** General styles ******/
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'K2D', sans-serif;
-  color: #404040;
+  color: var(--color-font-primary);
   margin: 0;
   padding: 0;
   text-align: center;
@@ -17,12 +35,12 @@ body {
 }
 
 a {
-  color: #404040;
+  color: var(--color-font-primary);
   text-decoration: none;
 }
 
 h1 {
-  color: #fd4d0c;
+  color: var(--color-font-emph);
 }
 
 header {
@@ -30,7 +48,8 @@ header {
   top: 0;
   width: 100%;
   height: 50px;
-  background-color: #ffdd99;
+  /* background-color: var(--color-bg-primary); */
+  background-color: transparent;
   text-align: right;
   z-index: 999;
 }
@@ -38,10 +57,11 @@ header {
 .hamburger,
 .nav-close {
   padding: 10px;
-  color: #bc5a45;
-  background-color: #ffdd99;
+  color: var(--color-font-emph);
+  background-color: var(--color-bg-secondary);
   border: none;
   font-size: 1.75em;
+  text-shadow: 2px 2px black;
 }
 
 #navbar {
@@ -80,20 +100,24 @@ header {
 .nav-link span {
   width: 100%;
   padding: 8px;
-  border: 2px solid #bc5a45;
-  border-radius: 95% / 95%;
-  background-color: #ffdd99;
+  border: 2px solid var(--color-bg-secondary);
+  border-radius: 20px 6px;
+  color: var(--color-bg-secondary);
+  text-shadow: 2px 2px white;
   text-align: center;
   box-sizing: border-box;
   transition:  box-shadow .3s linear;
+  z-index: 999;
+  transform: skew(-20deg);
 }
 
 .nav-link span:hover {
-  color: #fd4d0c;
+  color: var(--color-bg-secondary);
+  background-color: var(--color-bg-tertiary);
   box-shadow: 5px 5px 8px #888888;
   font-style: italic;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #888888;
+  /* text-shadow: 1px 1px 2px #888888; */
 }
 
 .buffer {
@@ -101,7 +125,7 @@ header {
 }
 
 #welcome {
-  background: linear-gradient(rgba(255,221,153,.2), rgba(255,221,153,.2)),
+  background: linear-gradient(rgba(218, 183, 133,.2), rgba(218, 183, 133,.2)),
               no-repeat left center fixed url("https://photos.smugmug.com/Web-Dev/Portfolio-Site/i-cM38h6c/0/1e18cae2/X2/apple-black-and-white-black-and-white-169573-X2.jpg");
   background-size: cover;
   width: 100%;
@@ -116,10 +140,12 @@ header {
   width: 300px;
   height: 150px;
   margin: 0 auto;
-  background-color: #ffdd99;
-  border: 8px solid #bc5a45;
-  border-radius: 150px / 80px;
-  box-shadow: 5px 5px 8px #888888;
+  background-color: var(--color-bg-tertiary);
+  border: 8px solid var(--color-bg-secondary);
+  /* border-radius: 150px / 80px; */
+  border-radius: 50px 30px;
+  box-shadow: 5px 5px 8px #161925;
+  transform: skew(-20deg);
 }
 
 #name-badge h1 {
@@ -127,12 +153,14 @@ header {
   padding-bottom: 0px;
   font-size: 2.5em;
   font-style: italic;
-  text-shadow: 2px 2px 4px #888888;
+  text-shadow: 2px 2px 2px #161925;
+  transform: skew(20deg);
 }
 
 #name-badge p {
   margin-top: 0px;
   font-size: 1.25em;
+  transform: skew(20deg);
 }
 
 #about {
@@ -140,7 +168,11 @@ header {
 }
 
 #about h2 {
-  color: #fd4d0c;
+  color: var(--color-font-emph);
+}
+
+#about p a {
+  color: var(--color-bg-secondary);
 }
 
 #about-flex {
@@ -180,11 +212,12 @@ header {
 
 #projects {
   min-height: 100vh;
-  background-color: rgba(255, 191, 128, 0.1);
+  /* background-color: rgba(255, 191, 128, 0.1); */
+  background-color: var(--color-bg-projects);
   padding-bottom: 90px;
 }
 
-#projects h2 {color: #bc5a45}
+#projects h2 {color: var(--color-bg-secondary)}
 
 .project-tile {
   display: inline-block;
@@ -192,14 +225,14 @@ header {
   width: 320px;
   height: 280px;
   margin: 20px 0;
-  border: 1px solid #bc5a45;
+  border: 1px solid var(--color-bg-secondary);
   box-shadow: 2px 2px 5px;
   background-color: white;
   transition: 0.7s ease-in-out;
 }
 
 .project-tile:hover {
-  box-shadow: 5px 5px 10px #bc5a45;
+  box-shadow: 5px 5px 10px var(--color-bg-secondary);
   transform: scale(1.05);
 }
 
@@ -210,7 +243,7 @@ header {
 
 .project-title {
   width: 100%;
-  color: #bc5a45;
+  color: var(--color-bg-secondary);
   font-size: 1.25em;
   text-align: center;
 }
@@ -224,7 +257,7 @@ header {
 
 #contact {
   color: white;
-  background-color: #bc5a45;
+  background-color: var(--color-bg-contact);
   min-height: 100vh;
 }
 
@@ -264,18 +297,22 @@ header {
 }
 
 #contact-submit {
-  width: 100px;
+  width: 150px;
   margin-bottom: 25px;
   padding: 8px;
-  border: 2px solid #bc5a45;
-  border-radius: 95% / 95%;
-  color: #404040;
-  background-color: #ffdd99;
+  border: 2px solid var(--color-bg-secondary);
+  border-radius: 35px 12px;
+  color: var(--color-font-light);
+  background-color: var(--color-bg-primary);
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  transform: skew(-20deg);
   transition: box-shadow .3s linear;
 }
 
 #contact-submit:hover {
-  color: #fd4d0c;
+  color: var(--color-font-emph);
+  background-color: var(--color-bg-tertiary);
   font-style: italic;
   font-weight: bold;
   text-shadow: 1px 1px 2px #888888;
@@ -291,14 +328,14 @@ header {
 .social-icon-sm {
   margin: 0 10px;
   padding: 0;
-  font-size: 1.75em;
+  font-size: 2em;
   color: white;
 }
 
 footer {
   height: 3em;
-  color: #404040;
-  background-color: #ffdd99;
+  color: var(--color-font-primary);
+  background-color: var(--color-bg-primary);
   font-size: .75em;
 }
 
@@ -355,7 +392,7 @@ footer p {
   }
 
   .nav-link span:hover {
-      border: 2px solid #bc5a45;
+      border: 2px solid var(--color-bg-secondary);
   }
 
   #about-flex {
@@ -420,14 +457,15 @@ footer p {
     border-radius: 100% / 95%;
   }
 
+<<<<<<< HEAD
   .nav-link span:hover {
-      border: 2px solid #bc5a45;
+    border: 2px solid var(--color-bg-secondary);
   }
 
   #name-badge {
     width: 460px;
     height: 230px;
-    border-radius: 230px / 120px;
+    /* border-radius: 230px / 120px; */
   }
 
   #name-badge h1 {
@@ -435,7 +473,7 @@ footer p {
     padding-bottom: 0px;
     font-size: 3.5em;
     font-style: italic;
-    text-shadow: 2px 2px 4px #888888;
+    text-shadow: 2px 2px 4px #161925;
   }
 
   #name-badge p {
@@ -456,10 +494,11 @@ footer p {
   #contact-submit {
     width: 160px;
     margin-bottom: 25px;
-    padding: 8px;
+    padding: 12px;
     border-radius: 95% / 95%;
     font-size: 1.25em;
   }
+
 
 }
   /* end Media Queries */
