@@ -56,10 +56,11 @@ header {
 .hamburger,
 .nav-close {
   padding: 10px;
-  color: var(--color-font-primary);
-  background-color: var(--color-bg-primary);
+  color: var(--color-font-emph);
+  background-color: var(--color-bg-secondary);
   border: none;
   font-size: 1.75em;
+  text-shadow: 2px 2px black;
 }
 
 #navbar {
@@ -99,12 +100,16 @@ header {
   width: 100%;
   padding: 8px;
   border: 2px solid var(--color-bg-secondary);
-  border-radius: 95% / 95%;
-  background-color: var(--color-bg-primary);
-  color: var(--color-font-primary);
-
+  border-radius: 20px 6px;
+  /* border-radius: 95% / 95%; */
+  /* background-color: var(--color-bg-primary); */
+  /* color: var(--color-font-primary); */
+  color: var(--color-bg-secondary);
+  text-shadow: 2px 2px white;
   text-align: center;
   box-sizing: border-box;
+  z-index: 999;
+  transform: skew(-20deg);
 }
 
 .nav-link li:hover {
@@ -149,7 +154,7 @@ header {
   margin-bottom: 15px;
   padding-bottom: 0px;
   font-size: 2.5em;
-  /* font-style: italic; */
+  font-style: italic;
   text-shadow: 2px 2px 2px #161925;
   transform: skew(20deg);
 }
@@ -157,6 +162,7 @@ header {
 #name-badge p {
   margin-top: 0px;
   font-size: 1.25em;
+  transform: skew(20deg);
 }
 
 #about {
@@ -291,13 +297,17 @@ header {
 }
 
 #contact-submit {
-  width: 100px;
+  width: 150px;
   margin-bottom: 25px;
   padding: 8px;
   border: 2px solid var(--color-bg-secondary);
-  border-radius: 95% / 95%;
+  /* border-radius: 95% / 95%; */
+  border-radius: 35px 12px;
   color: var(--color-font-light);
   background-color: var(--color-bg-primary);
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  transform: skew(-20deg);
 }
 
 #contact-submit:hover {
