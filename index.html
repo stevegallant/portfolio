@@ -24,10 +24,10 @@
       <span class="fa fa-close"></span>
     </a>
     <div id="navlist">
-      <a href="#welcome" class="nav-link"><span>welcome</span></a>
-      <a href="#about" class="nav-link"><span>about</span></a>
-      <a href="#projects" class="nav-link"><span>projects</span></a>
-      <a href="#contact" class="nav-link"><span>contact</span></a>
+      <a href="#welcome" class="nav-link"><span class="nav-item"><span class="nav-text">welcome</span></span></a>
+      <a href="#about" class="nav-link"><span class="nav-item"><span class="nav-text">about</span></span></a>
+      <a href="#projects" class="nav-link"><span class="nav-item"><span class="nav-text">projects</span></span></a>
+      <a href="#contact" class="nav-link"><span class="nav-item"><span class="nav-text">contact</span></span></a>
     </div>
   </nav>
   <a href="#main-nav-toggle" class="backdrop" hidden></a>
@@ -35,10 +35,13 @@
 
 
 <section id="welcome">
+  <!-- <div class="buffer"></div> -->
   <div class="buffer"></div>
-  <div id="name-badge">
-    <h1>Steve Gallant</h1>
-    <p>front-end web developer</p>
+  <div class="badge-center">
+    <div id="name-badge">
+      <h1>Steve Gallant</h1>
+      <p>front-end web developer</p>
+    </div>
   </div>
 </section> <!--end welcome-->
 
@@ -57,16 +60,18 @@
         and web development after a successful career in outsourced IT
         infrastructure and consulting. I enjoy building responsive, user-
         friendly, semantic web pages using HTML5, CSS3, and JavaScript. The blend
-        of logic and creativity in web development really appeals to me and I'm
-        excited to see what I can do for my next team.</p>
+        of logic and creativity in web development appeals to me, and I'm
+        excited to learn more each day.</p>
       <p>As a career-changer, my goal is to land a junior-level web development
         gig with a great team of people I can learn from, while leveraging my
         exceptional work habits and workplace savvy to contribute quickly. I've
-        been honing my skills in a disciplined course of online self-study for
-        over a year. As a computer hobbyist from an early age, this is how I've
-        always learned technology and built a successful career.</p>
+        been honing my coding skills over the past year with disciplined focus
+        and self-study of online resources. I built a successful IT career off
+        my personal enthusiasm for learning technology and am confident I will
+        become a valued asset to my next employer.</p>
       <p>The projects below reflect some of the skills I've gained so far. Please
-        <a href="#contact">contact me</a> to discuss how I can contribute to your team!</p>
+        <a href="#contact">contact me</a> to discuss how I can contribute to
+        your team!</p>
 
     </div>
   </div>     <!-- end about-flex -->
@@ -118,7 +123,7 @@
       <textarea id="contact-message" class="input-field" placeholder="What's on your mind?" required></textarea>
     </div>
     <p>* All fields required</p>
-    <input id="contact-submit" type="submit" value="send">
+    <button id="contact-submit"><span>send</span></button>
 
   </form>
   <div id="social-small">
