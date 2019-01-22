@@ -4,26 +4,34 @@
 $name = filter_var($_POST['contact-name'], FILTER_SANITIZE_STRING);
 $email = filter_var($_POST['contact-email'], FILTER_SANITIZE_STRING);
 $message = filter_var($_POST['contact-message'], FILTER_SANITIZE_STRING);
-$recaptcha_secret = "6Lcu34sUAAAAAF0-oN38_aI5IIn1BQCrjCco24aO";
-$recaptcha_resp = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$recaptcha_secret."&response=".$_POST['g-recaptcha-response']);
-$recaptcha_resp = json_decode($recaptcha_resp, true);
+$privatekey = "6Lcu34sUAAAAAF0-oN38_aI5IIn1BQCrjCco24aO";
 
-if($recaptcha_resp["success"] === true) {
-  echo "VERIFICATION PASSED";
+// load PHPMailer classes (manual)
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
+/* Exception class. */
+require 'src/Exception.php';
+/* The main PHPMailer class. */
+require 'src/PHPMailer.php';
+/* SMTP class, needed if you want to use SMTP. */
+require 'src/SMTP.php';
 
-  // load PHPMailer classes (manual)
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, [
+    'secret' => $privatekey,
+    'response' => $_POST['g-recaptcha-response'],
+    'remoteip' => $_SERVER['REMOTE_ADDR']
+]);
+$resp = json_decode(curl_exec($ch));
+curl_close($ch);
 
-  /* Exception class. */
-  require 'src/Exception.php';
-
-  /* The main PHPMailer class. */
-  require 'src/PHPMailer.php';
-
-  /* SMTP class, needed if you want to use SMTP. */
-  require 'src/SMTP.php';
+if ($resp->success) {
+  // If reCAPTCHA is validated, execute PHPMailer to send email
 
   $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
   try {
@@ -57,7 +65,7 @@ if($recaptcha_resp["success"] === true) {
 
 }
 else {
-  echo "VERIFICATION FAILED";
+  echo "reCAPTCHA VERIFICATION FAILED - Please click Back and try again!";
 }
 
 

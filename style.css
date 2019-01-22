@@ -11,7 +11,8 @@ under Media Queries section
   --color-bg-primary: #dab785;    /* header, etc */
   --color-bg-secondary: #d5896f;  /* dark borders, contact section bg */
   --color-bg-tertiary: #dab785;  /* shape bg */
-  --color-bg-projects: #daf0ee;
+  /* --color-bg-projects: #daf0ee; */
+  --color-bg-projects: rgba(112, 162, 136, 0.2);
 }
 
 /****** General styles ******/
@@ -330,6 +331,13 @@ header {
   cursor: pointer;
 }
 
+#rc-imageselect,
+.g-recaptcha {
+  margin: 0 auto;
+  transform: scale(0.5);
+  /* transform-origin: 0 0; */
+}
+
 #social-small div {
   display: inline-block;
   text-align: center;
@@ -537,6 +545,12 @@ footer p {
     font-size: 1.25em;
   }
 
+  #rc-imageselect,
+  .g-recaptcha {
+    margin: 0 auto;
+    transform: scale(0.75);
+    /* transform-origin: 0 0; */
+  }
 
 }
   /* end Media Queries */
