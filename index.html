@@ -103,24 +103,24 @@
   <div class="buffer"></div>
   <h2 class="contact-header">get in touch...</h2>
 
-  <form id="contact-form" method="post" action="mail.php">
+  <form id="contact-form" method="POST" action="PHPMailer/mail.php">
     <div class="label">
       <label id="name-label" for="contact-name">your name:</label>
     </div>
     <div class="input">
-      <input id="contact-name" class="input-field" type="text" placeholder="enter your name" required>
+      <input id="contact-name" class="input-field" name="contact-name" type="text" placeholder="enter your name" required>
     </div>
     <div class="label">
       <label id="email-label" for="contact-email">your email:</label>
     </div>
     <div class="input">
-      <input id="contact-email" class="input-field" type="email" placeholder="enter your email address" required>
+      <input id="contact-email" class="input-field" name="contact-email" type="email" placeholder="enter your email address" required>
     </div>
     <div class="label">
       <label id="message-label" for="contact-message">message:</label>
     </div>
     <div class="input">
-      <textarea id="contact-message" class="input-field" placeholder="What's on your mind?" required></textarea>
+      <textarea id="contact-message" class="input-field" name="contact-message" placeholder="What's on your mind?" required></textarea>
     </div>
     <p>* All fields required</p>
     <button id="contact-submit"><span>send</span></button>
