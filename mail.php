@@ -41,7 +41,7 @@ if ($resp->success) {
       $mail->Host = 'chimail.midphase.com';  // Specify main and backup SMTP servers
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
       $mail->Username = 'post@sgallant.us';                 // SMTP username
-      $mail->Password = '';                           // SMTP password
+      $mail->Password = '49T3>8fiT%';                           // SMTP password
       $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
       $mail->Port = 587;                                    // TCP port to connect to
 
