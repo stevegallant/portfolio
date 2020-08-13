@@ -123,7 +123,7 @@ header {
 
 #welcome {
   background: linear-gradient(rgba(218, 183, 133,.2), rgba(218, 183, 133,.2)),
-              no-repeat left center fixed url("https://photos.smugmug.com/Web-Dev/Portfolio-Site/i-cM38h6c/0/1e18cae2/X2/apple-black-and-white-black-and-white-169573-X2.jpg");
+    no-repeat left center fixed url("./img/laptop-background.jpg");
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -155,7 +155,6 @@ header {
   margin-bottom: 15px;
   padding-bottom: 0px;
   color: var(--color-font-emph);
-  /* font-size: 2.5em; */
   font-size: 1.75em;
   font-style: italic;
   text-shadow: 2px 2px 2px #161925;
@@ -186,7 +185,6 @@ header {
 }
 
 #intro {
-  /* width: 320px; */
   width: 300px;
   margin: 0 auto;
   text-align: left;
@@ -227,7 +225,6 @@ header {
 .project-tile {
   display: inline-block;
   overflow: hidden;
-  /* width: 320px; */
   width: 310px;
   height: 280px;
   margin: 20px 0;
@@ -335,7 +332,6 @@ header {
 .g-recaptcha {
   margin: 0 auto;
   transform: scale(0.5);
-  /* transform-origin: 0 0; */
 }
 
 #social-small div {
@@ -549,7 +545,6 @@ footer p {
   .g-recaptcha {
     margin: 0 auto;
     transform: scale(0.75);
-    /* transform-origin: 0 0; */
   }
 
 }
