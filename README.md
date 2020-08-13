@@ -1,3 +1,10 @@
-This is my personal portfolio site for web development projects I've completed to improve and expand my skills.
+# Steve Gallant Portfolio Site
 
-Simple static webpage with responsive CSS and PHP mailer for the contact form.
+## General info
+This is my personal portfolio site for web development skills and projects.
+
+## Technologies
+Project is created with:
+* HTML
+* Responsive CSS
+* PHP Mailer (for contact form)
