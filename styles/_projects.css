@@ -1,0 +1,58 @@
+#projects {
+  min-height: 100vh;
+  background-color: var(--color-bg-projects);
+  padding-bottom: 90px;
+}
+
+#projects h2 {color: var(--color-bg-secondary)}
+
+.project-tile {
+  display: inline-block;
+  overflow: hidden;
+  width: 310px;
+  height: 280px;
+  margin: 20px 0;
+  border: 1px solid var(--color-bg-secondary);
+  box-shadow: 2px 2px 5px;
+  background-color: white;
+  transition: 0.7s ease-in-out;
+}
+
+.project-tile:hover {
+  box-shadow: 5px 5px 10px var(--color-bg-secondary);
+  transform: scale(1.05);
+}
+
+.proj-pic {
+  width: 100%;
+  height: 220px;
+}
+
+.project-title {
+  width: 100%;
+  color: var(--color-bg-secondary);
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.project-detail {
+  width: 100%;
+  text-align: center;
+  font-size: .75em;
+  font-style: italic;
+}
+
+@media screen and (min-width: 374px) {
+
+  .project-tile {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+
+  .project-tile {
+    margin: 20px 30px;
+  }
+
+}
