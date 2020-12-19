@@ -1,6 +1,6 @@
 #contact {
   color: white;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary-alpha);
   min-height: 100vh;
 }
 
@@ -31,6 +31,10 @@
 .input-field::placeholder {
   color: lightgrey;
   opacity: .5;
+}
+
+.input-field:focus {
+  outline: none;
 }
 
 #contact p {

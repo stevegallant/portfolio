@@ -4,7 +4,8 @@
   --color-font-emph: #2be4cb;     /* h1, nav hover */
   --color-font-light: white;      /* on dark bg */
   --color-bg-primary: #dab785;    /* header, etc */
-  --color-bg-secondary: #d5896f;  /* dark borders, contact section bg */
+  --color-bg-secondary: #e48e2b;  /* dark borders, contact section bg */
+  --color-bg-secondary-alpha: rgb(228, 142, 43, 0.6);
   --color-bg-tertiary: #dab785;  /* shape bg */
   --color-bg-transparent: rgba(0, 0, 0, .2);
   --color-bg-projects: rgba(112, 162, 136, 0.2);

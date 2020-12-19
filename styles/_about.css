@@ -3,7 +3,7 @@
 }
 
 #about h2 {
-  color: var(--color-font-emph);
+  color: var(--color-bg-secondary);
 }
 
 #about p a {
