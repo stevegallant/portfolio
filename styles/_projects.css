@@ -1,11 +1,10 @@
 #projects {
   min-height: 100vh;
-  /* background-color: var(--color-bg-projects); */
-  background-color: rgba(43, 222, 228, .1);
+  background-color: var(--color-bg-secondary);
   padding-bottom: 90px;
 }
 
-#projects h2 {color: var(--color-bg-secondary)}
+#projects h2 {color: var(--color-font-heading)}
 
 .project-tile {
   display: inline-block;
@@ -13,14 +12,13 @@
   width: 310px;
   height: 280px;
   margin: 20px 0;
-  /* border: 1px solid var(--color-bg-secondary); */
   box-shadow: 2px 2px 5px;
   background-color: white;
   transition: 0.7s ease-in-out;
 }
 
 .project-tile:hover {
-  box-shadow: 5px 5px 10px var(--color-bg-secondary);
+  box-shadow: 5px 5px 10px var(--color-font-heading);
   transform: scale(1.05);
 }
 
@@ -31,7 +29,7 @@
 
 .project-title {
   width: 100%;
-  color: var(--color-bg-secondary);
+  color: var(--color-font-heading);
   font-size: 1.25em;
   text-align: center;
 }

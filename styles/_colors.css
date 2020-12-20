@@ -3,10 +3,8 @@
   --color-font-primary: #404040;  /* general text */
   --color-font-emph: #2be4cb;     /* h1, nav hover */
   --color-font-light: white;      /* on dark bg */
-  --color-bg-primary: #dab785;    /* header, etc */
-  --color-bg-secondary: #e48e2b;  /* dark borders, contact section bg */
-  --color-bg-secondary-alpha: rgb(228, 142, 43, 0.6);
-  --color-bg-tertiary: #dab785;  /* shape bg */
-  --color-bg-transparent: rgba(0, 0, 0, .2);
-  --color-bg-projects: rgba(112, 162, 136, 0.2);
+  --color-font-heading: #e48e2b;  /* headings and submit */
+  --color-bg-secondary:  rgba(43, 222, 228, .1);  /* projects bg */
+  --color-bg-tertiary: rgba(	8, 65, 66, 1);  /* contact bg */
+  --color-bg-transparent: rgba(0, 0, 0, .2);  /* name badge, hamburger */
 }

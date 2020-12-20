@@ -1,6 +1,6 @@
 #contact {
   color: white;
-  background-color: var(--color-bg-secondary-alpha);
+  background-color: var(--color-bg-tertiary);
   min-height: 100vh;
 }
 
@@ -47,10 +47,10 @@
   width: 200px;
   margin-bottom: 25px;
   padding: 8px;
-  border: 2px solid var(--color-bg-secondary);
+  border: none;
   border-radius: 14px 8px;
   color: var(--color-font-light);
-  background-color: var(--color-font-emph);
+  background-color: var(--color-font-heading);
   font-size: 1.25em;
   letter-spacing: 2px;
   transform: skew(-20deg);
@@ -64,7 +64,8 @@
 
 #contact-submit:hover {
   color: var(--color-font-emph);
-  background-color: var(--color-bg-tertiary);
+  background-color: transparent;
+  border: 2px solid var(--color-font-emph);
   font-style: italic;
   font-weight: bold;
   text-shadow: 1px 1px 2px #161925;

@@ -21,9 +21,7 @@
   height: 120px;
   margin: 0;
   background-color: var(--color-bg-transparent);
-  /* background-color: var(--color-bg-tertiary); */
   backdrop-filter: blur(3px);
-  /* border: 8px solid var(--color-bg-secondary); */
   border-radius: 50px 30px;
   box-shadow: 5px 5px 8px #888888;
   transform: skew(-20deg);

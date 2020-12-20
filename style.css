@@ -35,8 +35,8 @@ a {
 
 footer {
   height: 3em;
-  color: var(--color-font-primary);
-  background-color: var(--color-bg-primary);
+  color: var(--color-font-light);
+  background-color: var(--color-font-primary);
   font-size: .75em;
 }
 

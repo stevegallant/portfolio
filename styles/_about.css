@@ -3,11 +3,11 @@
 }
 
 #about h2 {
-  color: var(--color-bg-secondary);
+  color: var(--color-font-heading);
 }
 
 #about p a {
-  color: var(--color-bg-secondary);
+  color: var(--color-font-heading);
 }
 
 #about-flex {
