@@ -2,6 +2,7 @@
   color: white;
   background-color: var(--color-bg-tertiary);
   min-height: 100vh;
+  padding-top: 60px;
 }
 
 #contact-form {

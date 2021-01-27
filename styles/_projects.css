@@ -1,6 +1,7 @@
 #projects {
   min-height: 100vh;
   background-color: var(--color-bg-secondary);
+  padding-top: 60px;
   padding-bottom: 90px;
 }
 
